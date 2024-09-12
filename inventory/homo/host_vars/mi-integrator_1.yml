@@ -1,0 +1,20 @@
+---
+# NOTE: The parameterized values has the default values from the original pack. Please change them according to your
+# requirements. If you need to add additional configurations, please use the custom.yml under each role.
+
+hostname: wso2mi.hom.com
+ports_offset: 0
+
+# Heap memory allocation
+mi_memory: -Xms2048m -Xmx2048m
+
+# List of configuration file templates, and the paths they should be written to
+config_files:
+  - { src: 'carbon-home/conf/deployment.toml.j2',
+      dest: '{{ carbon_tmp_home }}/conf/deployment.toml' }
+  - { src: 'carbon-home/bin/micro-integrator.sh.j2',
+      dest: '{{ carbon_tmp_home }}/bin/micro-integrator.sh' }
+
+registry_link_path: /var/wso2mi/registry        
+server_link_path: /var/wso2mi/server 
+product_shared_dir: /var/wso2mi       

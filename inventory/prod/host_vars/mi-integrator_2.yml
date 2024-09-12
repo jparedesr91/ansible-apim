@@ -1,0 +1,16 @@
+---
+# NOTE: The parameterized values has the default values from the original pack. Please change them according to your
+# requirements. If you need to add additional configurations, please use the custom.yml under each role.
+
+hostname: localhost
+ports_offset: 3
+
+# Heap memory allocation
+mi_memory: -Xms256m -Xmx1024m
+
+# List of configuration file templates, and the paths they should be written to
+config_files:
+  - { src: 'carbon-home/conf/deployment.toml.j2',
+      dest: '{{ carbon_home }}/conf/deployment.toml' }
+  - { src: 'carbon-home/bin/micro-integrator.sh.j2',
+      dest: '{{ carbon_home }}/bin/micro-integrator.sh' }

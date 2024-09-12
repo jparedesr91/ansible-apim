@@ -332,6 +332,11 @@ do
     -DenableManagementApi=true \
     $NODE_PARAMS \
     -Dorg.apache.activemq.SERIALIZABLE_PACKAGES="*" \
+    -Djdk.tls.ephemeralDHKeySize=2048 \
+    -Djdk.tls.rejectClientInitiatedRenegotiation=true \
+    -DentityExpansionLimit=10000 \
+    -Djdk.util.zip.disableZip64ExtraFieldValidation=true \
+    -Djdk.nio.zipfs.allowDotZipEntry=true \
     org.wso2.micro.integrator.bootstrap.Bootstrap $*
     status=$?
 done

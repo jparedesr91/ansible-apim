@@ -5,7 +5,7 @@ After=network.target
 [Service]
 ExecStart={{ carbon_home }}/bin/micro-integrator.sh start
 ExecStop={{ carbon_home }}/bin/micro-integrator.sh stop
-ExecRestart={{ carbon_home }}/bin/micro-integrator.sh restart
+ExecReload={{ carbon_home }}/bin/micro-integrator.sh restart
 PIDFile={{ carbon_home }}/wso2carbon.pid
 User={{ wso2_user }}
 Group={{ wso2_group }}

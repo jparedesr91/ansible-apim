@@ -1,0 +1,10 @@
+[apim]
+apim-control-plane_1 ansible_host=[ip_address] ansible_user=[ssh_user]
+apim-control-plane_2 ansible_host=[ip_address] ansible_user=[ssh_user]
+apim-gateway_1 ansible_host=[ip_address] ansible_user=[ssh_user]
+apim-gateway_2 ansible_host=[ip_address] ansible_user=[ssh_user]
+apim-gateway_3 ansible_host=[ip_address] ansible_user=[ssh_user]
+
+[micro-integrator]
+mi-integrator_1 ansible_host=[ip_address] ansible_user=[ssh_user]
+mi-integrator_2 ansible_host=[ip_address] ansible_user=[ssh_user]
